@@ -14,9 +14,9 @@ public class TiposDeDatos {
     
         // asignando tipos de datos que no corresponden
         
-        int nombreGato = "Síkis";
+        /*int nombreGato = "Síkis";
         String estado = false;
         boolean edadGato = 11.5;
-        double medidaGato = true;
+        double medidaGato = true;*/
     }
 }
