@@ -1,6 +1,8 @@
 
 package tiposdedatos;
 
+import java.util.Scanner;
+
 public class TiposDeDatos {
 
     public static void main(String[] args) {
@@ -18,5 +20,20 @@ public class TiposDeDatos {
         String estado = false;
         boolean edadGato = 11.5;
         double medidaGato = true;*/
+        
+        //LECTURA - SCANNER
+        
+        Scanner teclado  = new Scanner(System.in);
+        System.out.println("Ingresa tu nombre");
+        String nuevoNombre = teclado.next(); 
+        System.out.println("Tu nombre es: " + nuevoNombre);
+        
+        System.out.println("Ingresa la edad: ");
+        int nuevaEdad = teclado.nextInt();
+        System.out.println("Tu edad es: " + nuevaEdad);
+        
+        System.out.println("Ingresa la estatura: ");
+        double nuevaEstatura = teclado.nextDouble();
+        System.out.println("Tu estatura es: " + nuevaEstatura);
     }
 }
