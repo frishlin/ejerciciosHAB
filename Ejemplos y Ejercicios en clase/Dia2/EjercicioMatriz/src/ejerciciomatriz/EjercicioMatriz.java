@@ -22,8 +22,8 @@ public class EjercicioMatriz {
         Scanner teclado = new Scanner(System.in);
         
         for(int i = 0; i < notas.length; i++) {
-            for(int j = 0; j < notas[0].length-1; j++) {
-                System.out.println("Ingresa la nota " + (j+1) + " del alumno " + (i+1) + ": ");
+            for(int j = 0; j < notas.length-1; j++) {
+                System.out.print("Ingresa la nota " + (j+1) + " del alumno " + (i+1) + ": ");
                 notas[i][j] = teclado.nextDouble();
             }
             
@@ -33,7 +33,7 @@ public class EjercicioMatriz {
         
         for(int i = 0; i < notas.length; i++){
             double suma = 0;
-            for(int j = 0; j < notas[0].length-1; j++){
+            for(int j = 0; j < notas.length-1; j++){
                 System.out.print(notas[i][j] + "\t");
                 suma += notas[i][j];                      
             }
