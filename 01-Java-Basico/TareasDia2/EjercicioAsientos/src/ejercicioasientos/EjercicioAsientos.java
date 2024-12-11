@@ -20,12 +20,14 @@ public class EjercicioAsientos {
 
     public static void main(String[] args) {
 
+        int disponible = 4;
+        int salir = 1;
         Scanner teclado = new Scanner(System.in);
         System.out.println("");
         System.out.println("--- RESERVA DE ASIENTOS ---");
 
         //Configurando asientos vacíos
-        String[][] asientos = new String[5][5];
+        String[][] asientos = new String[2][2];
         for (int i = 0; i < asientos.length; i++) {
             for (int j = 0; j < asientos.length; j++) {
                 asientos[i][j] = "O";
@@ -43,32 +45,54 @@ public class EjercicioAsientos {
         }
         System.out.println("");
         
-        //Solicita fila y columna
-        System.out.print("Dame la fila (Solo números del 1 al 5): ");
-        int fila = teclado.nextInt();
+        while(disponible != 0  && salir == 1) {
         
-        System.out.print("Dame la columna (Solo números del 1 al 5): ");
-        int columna = teclado.nextInt();
-        
-        if(fila <= 0 || fila > 5 || columna <= 0 || columna > 5) {
-            System.out.println("¡Este asiento no existe!");
-        } else {
-            //Asigna el valor de "X" a la posición de fila - 1 y columna - 1
-            System.out.println("");
-            asientos[fila - 1][columna - 1] = "X";
-        
-            //Imprime asientos con la reserva
-            for (int i = 0; i < asientos.length; i++) {
-                System.out.print("Fila " + (i+1) + " |  ");
-                for (int j = 0; j < asientos.length; j++) {
-                    System.out.print(asientos[i][j] + "\t");
-                }
+            //Solicita fila y columna
+            System.out.print("Dame la fila (Solo números del 1 al 5): ");
+            int fila = teclado.nextInt();
+
+            System.out.print("Dame la columna (Solo números del 1 al 5): ");
+            int columna = teclado.nextInt();
+            teclado.nextLine();
+
+            if(fila <= 0 || fila > 5 || columna <= 0 || columna > 5) {
+                System.out.println("0");
+                System.out.println("¡Este asiento no existe!");
+            }else if(asientos[fila-1][columna-1].equals("X")){
                 System.out.println("");
+                System.out.println("¡Este asiento ya se encuentra ocupado!");
+            } else{
+                //Asigna el valor de "X" a la posición de fila - 1 y columna - 1
+                System.out.println("");
+                asientos[fila - 1][columna - 1] = "X";
+                disponible--;
+                
+                //Imprime asientos con la reserva
+                for (int i = 0; i < asientos.length; i++) {
+                    System.out.print("Fila " + (i+1) + " |  ");
+                    for (int j = 0; j < asientos.length; j++) {
+                        System.out.print(asientos[i][j] + "\t");
+                    }
+                    System.out.println("");
+                    
+                    
+                }
+                
+                
             }
-            
+
+            System.out.println("");
+            if(disponible == 0) {
+                System.out.println("¡Ya no hay asientos disponibles!");    
+            } else {
+                System.out.print("¿Deseas seguir reservando asientos? 1 para sí, -1 para no : ");
+                salir = teclado.nextInt();
+            }
         }
-        
         System.out.println("");
+        System.out.println("¡Gracias por usar el sistema!");    
+            
     }
-    
+        
 }
+   
