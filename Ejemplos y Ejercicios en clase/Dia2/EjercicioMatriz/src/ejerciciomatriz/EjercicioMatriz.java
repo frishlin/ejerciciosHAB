@@ -31,19 +31,16 @@ public class EjercicioMatriz {
         
         System.out.println();
         
-        //double promedio = 0;
         for(int i = 0; i < notas.length; i++){
-            double promedio = 0;
+            double suma = 0;
             for(int j = 0; j < notas[0].length-1; j++){
                 System.out.print(notas[i][j] + "\t");
-                promedio += notas[i][j];                      
+                suma += notas[i][j];                      
             }
-            promedio /= 3;
-            System.out.println(promedio);
+            notas[i][3] = suma / 3;
+            System.out.println(notas[i][3]);
         }
-        
-        
-        
+   
     }
     
 }
