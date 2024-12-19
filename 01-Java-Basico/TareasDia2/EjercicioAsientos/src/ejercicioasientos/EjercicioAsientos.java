@@ -27,7 +27,7 @@ public class EjercicioAsientos {
         System.out.println("--- RESERVA DE ASIENTOS ---");
 
         //Configurando asientos vacíos
-        String[][] asientos = new String[2][2];
+        String[][] asientos = new String[5][5];
         for (int i = 0; i < asientos.length; i++) {
             for (int j = 0; j < asientos.length; j++) {
                 asientos[i][j] = "O";
