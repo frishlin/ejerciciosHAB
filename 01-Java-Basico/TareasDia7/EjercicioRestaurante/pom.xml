@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.mycompany</groupId>
-    <artifactId>Ejercicio2Restaurante</artifactId>
+    <groupId>com.hackaboss</groupId>
+    <artifactId>EjercicioRestaurante</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <exec.mainClass>com.mycompany.ejercicio2restaurante.Ejercicio2Restaurante</exec.mainClass>
+        <exec.mainClass>com.hackaboss.ejerciciorestaurante.EjercicioRestaurante</exec.mainClass>
     </properties>
-    <name>Ejemplo Restaurante</name>
+    <name>EjercicioRestaurante</name>
     <dependencies>
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
             <version>8.0.33</version>
         </dependency>
+        
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
             <artifactId>org.eclipse.persistence.core</artifactId>
@@ -65,7 +66,6 @@
             <version>7.0</version>
             <type>jar</type>
         </dependency>
-
-        
     </dependencies>
+
 </project>

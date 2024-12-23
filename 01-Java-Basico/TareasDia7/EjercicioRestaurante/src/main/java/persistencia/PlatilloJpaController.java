@@ -1,7 +1,5 @@
+package persistencia;
 
-package Persistencia;
-
-import Persistencia.exceptions.NonexistentEntityException;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.EntityManager;
@@ -12,23 +10,19 @@ import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import logica.Platillo;
+import persistencia.exceptions.NonexistentEntityException;
 
-/**
- *
- * @author Sol
- */
 public class PlatilloJpaController implements Serializable {
 
-    //crear el propio controlador
-    public PlatilloJpaController(){
+    public PlatilloJpaController() {
         emf = Persistence.createEntityManagerFactory("restaurantePU");
     }
-    
+
     public PlatilloJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
     private EntityManagerFactory emf = null;
-
+ 
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
     }
@@ -136,5 +130,5 @@ public class PlatilloJpaController implements Serializable {
             em.close();
         }
     }
-    
+
 }
