@@ -65,11 +65,11 @@ public class Ejercicio2Dia3Poo {
         boolean cambios = true;
         int contadorCambios = 0;
         while(cambios) {
-            System.out.print("\nIngresa número de la persona (1 al 5) cuyo nombre deseas corregir: ");
+            System.out.print("\nIngresa número de la persona (1 al 5) cuyo nombre deseas corregir:  ");
             int numero = teclado.nextInt();
             
             if(numero < 1 || numero >5) {
-                System.out.println("El número ingresado no es válido, favor de ingresar números del 1 al 5: ");
+                System.out.println("El número ingresado no es válido, favor de ingresar números del 1 al 5:  ");
             }else {
                 int indice = numero - 1;
                 System.out.println("El nombre de la persona a modificar es: " + personas[indice].getNombre());
@@ -97,12 +97,14 @@ public class Ejercicio2Dia3Poo {
         
         System.out.println("---------------------------------------------------");
         System.out.println("\nPersonas mayores a 30 años (" + contadorEdades + " encontrada(s))");
-        
+        System.out.println("---------------------------------------------------");
+
         for(int i = 0; i < personas.length; i++) {
             if(personas[i].getEdad() > 30) {
                 System.out.println(personas[i].getNombre() + " con " + personas[i].getEdad() + " años");
             }
         }
+        System.out.println("");
     }
     
     public static void mostrarRegistros(Persona[] personas) {
@@ -122,7 +124,5 @@ public class Ejercicio2Dia3Poo {
         }
         return contadorEdades;
     }
-    
-    
     
 }
